@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sasi & Kanmani's Date Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to Sasi & Kanmani's Date Portal</h1>
+    <p>Curated moments, just for us.</p>
+  </header>
+
+  <main>
+    <button onclick="location.href='date-picker.html'">Pick a Date Type</button>
+    <button onclick="location.href='spin-wheel.html'">Spin the Date Wheel</button>
+    <button onclick="location.href='favorites.html'">Our Favourites</button>
+    <button onclick="surpriseMe()">Surprise Me, Sasi!</button>
+    <p id="surprise-text"></p>
+  </main>
+
+  <script>
+    function surpriseMe() {
+      const surprises = [
+        "Wear comfy shoes and bring your sass – we're off to chase fireflies and fries.",
+        "Put on your PJs – we’re building a blanket fort tonight.",
+        "You pick a song, I pick a place – mystery dance challenge!"
+      ];
+      document.getElementById("surprise-text").innerText =
+        surprises[Math.floor(Math.random() * surprises.length)];
+    }
+  </script>
+</body>
+</html>

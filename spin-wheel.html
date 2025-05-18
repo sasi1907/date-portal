@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spin the Wheel</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h2>Spin the Date Wheel</h2>
+  <button onclick="spinDate()">Spin!</button>
+  <p id="date-result"></p>
+
+  <script>
+    const dates = [
+      "Make sushi at home and prank call our friends!",
+      "Go cloud-watching and name each one.",
+      "Build a LEGO city while pretending we’re architects."
+    ];
+    function spinDate() {
+      document.getElementById("date-result").innerText = 
+        dates[Math.floor(Math.random() * dates.length)];
+    }
+  </script>
+
+  <button onclick="window.history.back()">Back</button>
+</body>
+</html>
